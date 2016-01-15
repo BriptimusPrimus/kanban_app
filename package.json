@@ -1,0 +1,25 @@
+{
+  "name": "kanban_app",
+  "version": "1.0.0",
+  "description": "tutorial http://survivejs.com/webpack_react/developing_with_webpack/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BriptimusPrimus/kanban_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BriptimusPrimus/kanban_app/issues"
+  },
+  "homepage": "https://github.com/BriptimusPrimus/kanban_app#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^1.7.0",
+    "webpack": "^1.12.11"
+  }
+}
