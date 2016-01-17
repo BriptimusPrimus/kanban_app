@@ -10,7 +10,6 @@ class NoteStore {
     this.notes = [];
   }
   create(note) {
-
     const notes = this.notes;
 
     note.id = uuid.v4();
@@ -20,7 +19,6 @@ class NoteStore {
     });
   }
   update(updatedNote) {
-
     const notes = this.notes.map((note) => {
       if(note.id === updatedNote.id) {
         return assign({}, note, updatedNote);
@@ -32,7 +30,6 @@ class NoteStore {
     this.setState({notes});
   }
   delete(id) {
-
     this.setState({
       notes: this.notes.filter((note) => note.id !== id)
     });
