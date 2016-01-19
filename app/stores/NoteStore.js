@@ -8,6 +8,10 @@ class NoteStore {
     this.bindActions(NoteActions);
 
     this.notes = [];
+
+    this.exportPublicMethods({
+      get: this.get.bind(this)
+    });    
   }
   create(note) {
     const notes = this.notes;
@@ -17,6 +21,8 @@ class NoteStore {
     this.setState({
       notes: notes.concat(note)
     });
+    
+    return note;
   }
   update(updatedNote) {
     const notes = this.notes.map((note) => {
@@ -34,6 +40,11 @@ class NoteStore {
       notes: this.notes.filter((note) => note.id !== id)
     });
   }
+  get(ids) {
+    return (ids || []).map(
+      (id) => this.notes.filter((note) => note.id === id)
+    ).filter((a) => a.length).map((a) => a[0]);
+  }  
 }
 
 export default alt.createStore(NoteStore, 'NoteStore');
